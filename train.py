@@ -34,10 +34,14 @@ try:
 except:
     print('There is no style_image')
 
+
+
 if args.gpu_num is not None:
     os.environ['CUDA_VISIBLE_DEVICES'] = 'args.gpu_num'
+else:
+    print("You have not choose a gpu,please confirm that you don't need it to speed up your train")
 
-content_image = load_image(args.content_image,size=[224,224])
+content_image = load_image(args.content_image)
 style_image = load_image(args.style_image,size=(content_image.shape[1],content_image.shape[0]))
 
 
