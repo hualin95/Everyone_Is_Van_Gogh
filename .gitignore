@@ -2,7 +2,8 @@
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 .idea/*
-.weight/*
+weight/*
+*.py[cod]
 
 # User-specific stuff:
 .idea/**/workspace.xml
