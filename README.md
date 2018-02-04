@@ -5,4 +5,4 @@
 ![Build Status](https://img.shields.io/appveyor/ci/gruntjs/grunt/master.svg)
 
 Everyone_Is_Van_Gogh is a tensorflow implementation of style transfer which described in the next paper:
-*[A Neural Algorithm of Artistic Style](https://arxiv.org/pdf/1508.06576v2.pdf)
+* [A Neural Algorithm of Artistic Style](https://arxiv.org/pdf/1508.06576v2.pdf)
