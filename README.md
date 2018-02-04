@@ -1,5 +1,3 @@
-
-
 ![](https://github.com/hualin95/Everyone_Is_Van_Gogh/blob/master/docs/logo.png)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/hualin95/Everyone_Is_Van_Gogh/blob/master/LICENSE) 
 ![Build Status](https://img.shields.io/appveyor/ci/gruntjs/grunt/master.svg)
@@ -11,3 +9,7 @@ Everyone_Is_Van_Gogh is a tensorflow implementation of style transfer which desc
 * 1.tensorflow v1.5
 * 2.Cudnn v9.0
 * 3.Python v3.6 
+* 4.Bash(git、ssh)
+
+## Getting Started
+* 1.git clone git@github.com:hualin95/Everyone_Is_Van_Gogh.git
