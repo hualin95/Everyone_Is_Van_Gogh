@@ -6,14 +6,13 @@
 # @Software: PyCharm
 
 
-import tensorflow as tf
 from utils.utils import *
 from models.vgg19_tf import VGG19
+import os
 
 
-
-
-content_image = load_image("images/gyeongbokgung.jpg")
+os.environ['CUDA_VISIBLE_DEVICES']='0'
+content_image = load_image("images/gyeongbokgung.jpg",size=[224,224])
 style_image = load_image("images/starry-night.jpg",size=(content_image.shape[1],content_image.shape[0]))
 
 
