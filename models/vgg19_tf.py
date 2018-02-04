@@ -196,27 +196,27 @@ class VGG19:
             strides=2,
             name='pool5'
         )
-        self.fc_in = tf.layers.flatten(self.pool5)
-        self.fc6 = tf.layers.dense(
-            inputs=self.fc_in,
-            units=4096,
-            activation=tf.nn.relu,
-            name='fc6'
-        )
-        self.dropout1 = tf.layers.dropout(self.fc6,rate=0.5)
-        self.fc7 = tf.layers.dense(
-            inputs=self.dropout1,
-            units=4096,
-            activation=tf.nn.relu,
-            name='fc7'
-        )
-        self.dropout2 = tf.layers.dropout(self.fc7, rate=0.5)
-        self.fc8 = tf.layers.dense(
-            inputs=self.dropout2,
-            units=1000,
-            activation=tf.nn.relu,
-            name='fc8'
-        )
+        # self.fc_in = tf.layers.flatten(self.pool5)
+        # self.fc6 = tf.layers.dense(
+        #     inputs=self.fc_in,
+        #     units=4096,
+        #     activation=tf.nn.relu,
+        #     name='fc6'
+        # )
+        # self.dropout1 = tf.layers.dropout(self.fc6,rate=0.5)
+        # self.fc7 = tf.layers.dense(
+        #     inputs=self.dropout1,
+        #     units=4096,
+        #     activation=tf.nn.relu,
+        #     name='fc7'
+        # )
+        # self.dropout2 = tf.layers.dropout(self.fc7, rate=0.5)
+        # self.fc8 = tf.layers.dense(
+        #     inputs=self.dropout2,
+        #     units=1000,
+        #     activation=tf.nn.relu,
+        #     name='fc8'
+        # )
 
 
 

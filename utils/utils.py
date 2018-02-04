@@ -24,10 +24,6 @@ def load_image(image_path, size=None):
 
     if size is not None:
         image = image.resize(size, PIL.Image.LANCZOS)
-    return np.float32(image)
-
-def generate_image():
-    image = PIL.Image.new("RGB",[224,224],"white")
 
     return np.float32(image)
 
