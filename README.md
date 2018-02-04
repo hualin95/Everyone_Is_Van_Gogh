@@ -9,6 +9,6 @@ Everyone_Is_Van_Gogh is a tensorflow implementation of style transfer which desc
 * [A Neural Algorithm of Artistic Style](https://arxiv.org/pdf/1508.06576v2.pdf)
 
 ## Environment
-1.tensorflow v1.5
-2.Cudnn v9.0
-3.Python v3.6 
+* 1.tensorflow v1.5
+* 2.Cudnn v9.0
+* 3.Python v3.6 
