@@ -72,11 +72,11 @@ J_content = compute_content_cost(a_C, a_G)
 
 J_style = 0
 
-out_S_1 = model.conv1_1
-out_S_2 = model.conv2_1
-out_S_3 = model.conv3_1
-out_S_4 = model.conv4_1
-out_S_5 = model.conv5_1
+out_S_1 = model.relu1_1
+out_S_2 = model.relu2_1
+out_S_3 = model.relu3_1
+out_S_4 = model.relu4_1
+out_S_5 = model.relu5_1
 
 a_C_1, a_S_1,a_G_1 =tf.split(out_S_1,[1,1,1],axis=0)
 J_style_layer_1 = compute_layer_style_cost(a_S_1, a_G_1)
