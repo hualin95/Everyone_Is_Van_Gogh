@@ -17,7 +17,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--VGG19_Model_Path',type=str,default='weight/vgg19.npy',help='The model_path of VGG19 where you store.')
 parser.add_argument('--content_image',type=str,default='images/content/ucas.jpg',help='The path of content_image where you store.')
 parser.add_argument('--style_image',type=str,default='images/style/starry-night.jpg',help='The path of style_image where you store.')
-parser.add_argument('--gpu_num',type=int,default=None,help='gpu number if you need')
+# parser.add_argument('--gpu_num',type=int,default=None,help='gpu number if you need')
 args = parser.parse_args()
 
 try:
@@ -37,11 +37,11 @@ except:
 
 
 
-if args.gpu_num is not None:
-    os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
-    os.environ['CUDA_VISIBLE_DEVICES'] = 'args.gpu_num'
-else:
-    print("You have not choose a gpu,please confirm that you don't need it to speed up your train")
+# if args.gpu_num is not None:
+#     os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
+#     os.environ['CUDA_VISIBLE_DEVICES'] = 'args.gpu_num'
+# else:
+#     print("You have not choose a gpu,please confirm that you don't need it to speed up your train")
 
 content_image = load_image(args.content_image)
 style_image = load_image(args.style_image,size=(content_image.shape[1],content_image.shape[0]))
