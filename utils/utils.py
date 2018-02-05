@@ -85,7 +85,7 @@ def compute_style_cost(out_S, out_G, STYLE_LAYERS):
     return J_style
 
 
-def total_cost(J_content, J_style, alpha=10, beta=40):
+def total_cost(J_content, J_style, alpha=1, beta=1e-3):
 
     J = alpha * J_content + beta * J_style
     return J

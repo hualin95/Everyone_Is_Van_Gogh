@@ -10,6 +10,7 @@ from utils.utils import *
 from models.vgg19_tf import VGG19
 import os
 import argparse
+import numpy as np
 
 
 parser = argparse.ArgumentParser()
@@ -98,7 +99,7 @@ a_C_5, a_S_5,a_G_5 =tf.split(out_S_5,[1,1,1],axis=0)
 J_style_layer_5 = compute_layer_style_cost(a_S_5, a_G_5)
 J_style += 0.2 * J_style_layer_5
 
-J_all = total_cost(J_content, J_style, 10, 40)
+J_all = total_cost(J_content, J_style)
 
 
 
@@ -111,7 +112,7 @@ train_step = optimizer.minimize(J_all)
 with tf.Session() as sess:
     sess.run(tf.global_variables_initializer())
 
-    for i in range(200):
+    for i in range(1000):
 
         sess.run(train_step,feed_dict={picture_c: content_image, picture_s: style_image})
 
@@ -119,7 +120,7 @@ with tf.Session() as sess:
 
 
 
-        if i % 20 == 0:
+        if i % 100 == 0:
             J_All, J_Content, J_Style = sess.run([J_all, J_content, J_style],feed_dict={picture_c: content_image, picture_s: style_image})
             print("Iteration " + str(i) + " :")
             print("total cost = " + str(J_All))
