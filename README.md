@@ -18,9 +18,9 @@ To use the VGG19 networks, you have to download the npy files for VGG19 NPY from
 ## Getting Started
 * 1.
 ```
-clone this project 
+clone this project :git clone git@github.com:hualin95/Everyone_Is_Van_Gogh.git
 ```
-`git clone git@github.com:hualin95/Everyone_Is_Van_Gogh.git`
+
 
 * 2.cd Everyone_Is_Van_Gogh
 * 3.
